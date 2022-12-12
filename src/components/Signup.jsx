@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Text, View, Image,TextInput,Pressable,Keyboard, ScrollView } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  TextInput,
+  Pressable,
+  Keyboard,
+  ScrollView,
+} from "react-native";
+import { useAuth } from "../context/AuthContext";
 
-import style from "../styles/StyleMain"
+import style from "../styles/StyleMain";
 
 function Signup({ navigation }) {
   function login() {}
@@ -9,12 +18,13 @@ function Signup({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  
+
   const [keyboardStatus, setKeyboardStatus] = useState(undefined);
 
+  const { signup } = useAuth();
 
   function handleSignup(evt) {
-    login(email, password);
+    signup(username, email, password);
     setPassword("");
   }
 
@@ -66,6 +76,16 @@ function Signup({ navigation }) {
           placeholder="password"
           secureTextEntry={true}
           value={password}
+          onChangeText={(evt) => {
+            setPassword(evt);
+          }}
+        />
+        <TextInput
+          style={style.input}
+          placeholderTextColor="#FFF"
+          placeholder="confirm password"
+          secureTextEntry={true}
+          value={confirmPassword}
           onChangeText={(evt) => {
             setPassword(evt);
           }}

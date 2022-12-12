@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Text, View, Image,TextInput,Pressable,Keyboard, ScrollView } from "react-native";
+import { useAuth } from "../context/AuthContext";
 
 import style from "../styles/StyleMain"
 
 function Login({ navigation }) {
-  function login() {}
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [keyboardStatus, setKeyboardStatus] = useState(undefined);
 
+
+  const {currentUser, login } = useAuth();
 
   function handleLogin(evt) {
     login(email, password);
@@ -28,10 +31,9 @@ function Login({ navigation }) {
       hideSubscription.remove();
     };
   }, []);
-
+  // console.log(currentUser)
   return (
     <ScrollView contentContainerStyle={style.body}>
-      <Text></Text>
       {keyboardStatus !== "Keyboard Shown" && (
         <Image style={style.img} source={require("../static/img/logo.png")} />
       )}

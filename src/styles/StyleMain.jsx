@@ -28,14 +28,17 @@ export default style = StyleSheet.create({
   img: {
     width: 150,
     height: 150,
-    marginVertical: 20,
+    marginTop: 0,
+    padding: 0,
+    marginBottom: 20,
   },
   form: {
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'space-around',
     width: Dimensions.get('window').width - 100,
     backgroundColor: backgroundColor_2,
-    paddingVertical: 20,
+    paddingVertical: 10,
   },
   formHeader: {
     fontSize: 24,
