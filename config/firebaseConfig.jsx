@@ -4,7 +4,7 @@ import {getAuth } from "firebase/auth"
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyAxnMr-3kZySCqVMjSgMsWXLa_6f5dOqCM",
+  apiKey: "",
   authDomain: "rahimia-management.firebaseapp.com",
   projectId: "rahimia-management",
   storageBucket: "rahimia-management.appspot.com",
