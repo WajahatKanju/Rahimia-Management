@@ -31,7 +31,7 @@ function Login({ navigation }) {
       hideSubscription.remove();
     };
   }, []);
-  // console.log(currentUser)
+  // console.log(currentUser)aa
   return (
     <ScrollView contentContainerStyle={style.body}>
       {keyboardStatus !== "Keyboard Shown" && (

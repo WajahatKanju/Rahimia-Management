@@ -15,7 +15,7 @@ export const styleDashboard = StyleSheet.create({
   }
 });
 
-export default style = StyleSheet.create({
+export default styles = StyleSheet.create({
   body: {
     flex: 1,
     backgroundColor: backgroundColor_1,
@@ -80,5 +80,12 @@ export default style = StyleSheet.create({
   navigateText: {
     color: textColor,
     fontSize: 18,
+  },
+  flex1: {
+    flex: 1
+  },
+  centerCenter: {
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 });
